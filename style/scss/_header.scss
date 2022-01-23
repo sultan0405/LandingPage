@@ -1,0 +1,70 @@
+@import 'mixins';
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#d8e2dc;
+    z-index: 100;
+    .container{
+        max-width: 1200px;
+        height: 100px;
+        width: 95%;
+        margin: 0 auto;
+        @include Flex(center, space-between);
+        .left{
+                @include Flex(center, space-between);
+                width: 55%;
+                .menu{
+                    @include Flex(center, space-between);
+                    width: 50%;
+                li:first-of-type{
+                     a{
+                     color: $text-cl;
+                     font-weight: bold;
+                     font-size: 14px;
+                   }
+               }
+               li{
+                   a{
+                       font-size: 14px;
+                       color: $text-cl;
+                    }
+                }
+               
+           }
+           .logo{
+               .logo_content{
+                font-family: semi-bold;
+                   color: $text-cl;
+               }
+           }
+       }
+    .address{
+        @include Flex_colm(center,column);
+        color: $text-cl;
+        font-size: 14px;
+        .address_content{
+            @include Flex_algn(center);
+            margin-right: 92px;
+            .fa{
+                color: $text-cl;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            p{
+                font-size: 13px;
+                margin-left: 10px;
+            }
+        }
+    }
+    .address_text{
+        font-size: 13px;
+        align-self: flex-end;
+    }
+   }
+   
+}
+.shadow{
+    box-shadow: 0 2px 10px rgba(255,255,255,0.5);
+}

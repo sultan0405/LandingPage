@@ -1,0 +1,50 @@
+@import './scss/vars';
+@import './scss/header';
+@import './scss/home';
+@import './scss/benefits';
+@import './scss/service';
+@import './scss/footer';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: regular;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: semi-bold;
+    src: url('../fonts/Poppins-SemiBold.ttf');
+}
+@font-face {
+    font-family: _bold;
+    src: url('../fonts/Poppins-Bold.ttf');
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: regular, 'san-serif';
+    overflow-x: hidden;
+}
+section{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+
+

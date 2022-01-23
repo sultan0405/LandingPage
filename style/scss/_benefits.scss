@@ -1,0 +1,161 @@
+@import 'mixins';
+
+.benefits{
+    padding: 10rem 0 0;
+    margin-top: 14rem ;
+    .benefits_container{
+        display: grid;
+        grid-template-columns: 0.3fr 1fr 1fr;
+        gap: 2rem;
+        .goals_box_container{
+            padding-top: 1.5rem;
+            @include Flex__colm(space-between, column);
+            height: 94%;
+            .goals_box{
+                position: relative;
+                width: 150px;
+                padding: 20px 30px;
+                background-color: #fff;
+                @include Flex_colm(center, column);
+                color: $text-cl;
+                &::before{
+                    position: absolute;
+                    bottom: -10%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40%;
+                    height: 30%;
+                    background: rgba(0, 0, 0, .2);
+                    z-index: -1;
+                    filter: blur(40px);    content: '';
+                
+                }
+                .vision_wrapper{
+                    box-shadow: inset 53px 11px 36px -9px rgba(0,0,0,0.025);
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 70px;
+                    margin-bottom: 1.5rem;
+                    img{
+                        @include ObjectFit(cover)
+                    }
+                }
+                .missions_wrapper{
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 70px;
+                    box-shadow: inset 53px 11px 36px -9px rgba(0,0,0,0.025);
+                    margin-bottom: 1.5rem;
+                    img{
+                        @include ObjectFit(cover)
+                    }
+                    
+                }
+                .goals_wrapper{
+                    margin-bottom: 1.5rem;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 70px;
+                    box-shadow: inset 53px 11px 36px -9px rgba(0,0,0,0.025);
+                    img{
+                        @include ObjectFit(cover)
+                    }
+                    
+                }
+            }
+        }
+        .benefit_img_wrapper{
+            width: 480px;
+            height:auto;
+            position: relative;
+            .benefit_img{
+                @include ObjectFit(contain)
+            }
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                background-color: rgb(232, 232, 232);
+                bottom: 30px;
+                z-index: -1;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 30%;
+                width: 80%;
+            }
+        }
+        .benefit_data{
+            color: $text-cl;
+            padding-top: 1.5rem;
+            .benefit_title{
+                font-size: 2.8rem;
+                color: $text-cl;
+                font-family: _bold;
+                line-height: 3.5rem;
+            }
+            .benefit_text{
+                padding-top: 2rem;
+                padding-bottom: 4rem;
+                color: #052a458a;
+                line-height: 2rem;
+                font-size: 15px;
+                font-weight: bolder;
+            }
+            .benefit_btn{
+                    background: $bg-orange;
+                    padding: 20px 50px;
+                    color: #fff;
+                    font-weight: bolder;
+                    letter-spacing: 0.9px;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 70%;
+                        height: 15%;
+                        background-color: $bg-orange;
+                        filter: blur(20px); 
+                    
+                    }
+            }
+            .benefit_profile{
+                padding-top: 7rem;
+                @include Flex__direct(column);
+                justify-content: left;
+                width: 100%;
+                .profile_user{
+                    @include Flex_algn(center);
+                    .profile_img{
+                            margin-right: 1rem;
+                            clip-path: circle();
+                            width: auto;
+                            height: 35px;
+                            object-fit: contain;
+                            background-color: rgb(96, 167, 221);
+                    }
+                }
+                .profile_text{
+                    color: #052a458a;
+                    font-weight: bolder;
+                    padding-top: 1rem;
+                    width: 65%;
+                    padding-left: 55px;
+                    line-height: 1.8rem;
+                    position: relative;
+                    @include Flex_algn(flex-start);
+                    font-size: 13px;
+                    .line{
+                        margin-top: 3px;
+                        margin-right: .7rem;
+                        width: 8px;
+                        height: 25px;
+                        background-color: $text-cl;
+                    }
+                }
+            }
+        }
+    }
+}

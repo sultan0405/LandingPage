@@ -1,0 +1,117 @@
+@import 'mixins';
+footer{
+    padding: 8rem 0 4rem;
+   .footer_container{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    color: $text-cl;
+    .post_container{
+        @include Flex_colm(flex-start, column);
+        .post_wrapper{
+            @include Flex(center, space-between);
+            .post_img_wrapper{
+                width: auto;
+                height: 140px;
+                .post_img{
+                    @include ObjectFit(contain)
+                }
+            }
+            .post_data{
+                @include Flex__direct(column);
+                margin-left: 2.5rem;
+                margin-top: 2rem;
+                padding-bottom: 2rem;
+                 .post_content{
+                     font-size: 14px;
+                     font-weight: bolder;
+                     line-height: 1.7rem;
+                     padding-bottom: 1rem;
+                    }
+                    .post_date{
+                        font-weight: bolder;
+                        font-size: 12px;
+                        color: rgba(0, 0,0,0.15);
+                        letter-spacing: 0.9px;
+                    }
+                }
+                .underlined{
+                    border-bottom: 2px solid rgba(0, 0,0,0.03);
+                }
+            }
+        }
+        .about{
+        @include Flex__direct(column);
+        .social_wrapper{
+            @include Flex_jcon(space-between);
+            width: 100%;
+            padding: 3rem 0;
+            .follow{
+                @include Flex__direct(column);
+                .social_icons{
+                    @include Flex_jcon(space-between);
+                    padding: 1rem 0;
+                    width: 60%;
+                    overflow:hidden;
+                    i{
+                        font-size: 1.5rem;
+                        &:nth-of-type(1){
+                            color: rgb(16, 143, 255);
+                        }
+                        &:nth-of-type(2){
+                            color: red;
+                        }
+                        &:nth-of-type(3){
+                            border-radius: 8px;
+                            color: #fff;
+                            overflow-y: hidden;
+                            background: linear-gradient( blue, red,yellow);
+                        }
+                    }
+                    
+                }
+            }
+            .query{
+                    @include Flex__direct(column);
+                .call{
+                    @include Flex_algn(center);
+                    padding: 1rem 0;
+                    i{
+                        font-size: 1.5rem;
+                        font-weight: bolder;
+                        margin-right: 1rem;
+                    }
+                    .number{
+                        font-size: 14px;
+                        color: gray;
+                    }
+                }
+                
+            }
+            
+        }
+        .company_wrapper{
+            width: 100%;
+            @include Flex_jcon(space-between);
+            .company_box{
+                .company_groups{
+                    padding-top: 1.2rem;
+                    li{
+                        font-size: 14px;
+                        padding-bottom: .8rem;
+                        a{
+                            color: gray;
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+   }
+}

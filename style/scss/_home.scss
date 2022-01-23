@@ -1,0 +1,223 @@
+@import 'mixins';
+.main{
+    background-color: #d8e2dc;
+    position: relative;
+    .home{
+        padding: 6rem 0 8rem;
+        position: relative;
+        .cyc_1{
+            position: absolute;
+            top: 250px;
+            right: 70px;
+            width: 410px;
+            height: 410px;
+            border-radius:50%;
+            background-color: #d8e2dc;
+        }
+        .cyc_2{
+            position: absolute;
+            top: 200px;
+            right: 15px;
+            width: 520px;
+            height: 520px;
+            border-radius:50%;
+            background-color: rgba(0, 0, 0, 0.025);
+        }
+        .cyc_3{
+            position: absolute;
+            top: 140px;
+            right: -50px;
+            width: 650px;
+            height: 650px;
+            border-radius:50%;
+            background-color: #d8e2dc;
+        }
+        .cyc_4{
+            position: absolute;
+            top: 100px;
+            right: -100px;
+            width: 750px;
+            height: 750px;
+            border-radius:50%;
+            background-color: rgba(0, 0, 0, 0.015);
+        }
+        .home_container{
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            grid-template-areas:"data ."
+                                "values ." ;
+            .home_data{
+                grid-area: data;
+                padding: 4rem 0 6rem;
+                .data_text_wrapper{
+                    margin-bottom: 4rem;
+                    .home_content{
+                        font-size: 4rem;
+                        font-family: _bold;
+                        line-height: 4.5rem;
+                        color: $text-cl;
+                        margin-bottom: 2.5rem;
+                    }
+                    .home_text{
+                    color: $text-cl;
+                    font-size: .9rem;
+                    line-height: 1.5rem;
+                    width: 80%;
+                    }             
+                }
+                .btn{
+                    background: $bg-orange;
+                    padding: 20px 45px;
+                    color: #fff;
+                    font-weight: bolder;
+                    letter-spacing: 0.8px;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -10%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 55%;
+                        height: 20%;
+                        background-color: $bg-orange;
+                        filter: blur(15px); 
+                    
+                    }
+                }
+            }
+            .home_img{
+                position: relative;
+                position: absolute;
+                top: 130px;
+                right: -80px;
+                .stats{
+                    position: absolute;
+                    background:linear-gradient(#dde3df, #fff);
+                    width: 190px;
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    top: 100px;
+                    left: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 120px;
+                    .stats_data{
+                        color: #b7b7bb;
+                        font-size: 12px;
+                        @include Flex(center, space-between)
+                    }
+                    .stats_price{
+                        @include Flex(center, space-between);
+                        position: relative;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: $text-cl;
+                    }
+    
+                    .stats_range{
+                        width: 100%;
+                        height: 8px;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        margin-bottom: 5px;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-color: $bg-orange;
+                            height: 100%;
+                            width: 35%;
+                        }
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: -28px;
+                        right: 0;
+                        left: 45%;
+                        transform: translateY(-45%);
+                        width: 0;
+                        height: 10px;
+                        border-top: 10px solid  #fff;
+                        border-right: 10px solid transparent;
+                        border-left: 10px solid transparent ;
+                    }
+                }
+                .img_wrapper{
+                    width: auto;
+                    height: 700px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .home_values{
+                grid-area: values;
+                @include Flex(center, space-between);
+                width: 90%;
+                .val_box{
+                    @include Flex_colm(flex-start, column);
+                    color: $text-cl;
+                    h1{
+                        font-family: semi-bold;
+                        font-size: 2.2rem;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .main_box_container{
+        position: absolute;
+        bottom: -240px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr;
+        gap: 3rem;
+        align-content:center;
+        padding: 0 1rem;
+        justify-content: center;
+        .main_box{
+            color: $text-cl;
+            background-color: #fff;
+            @include Flex_colm(flex-start, column);
+            padding: 15px;
+            position: relative;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 25px 70px -40px;
+            .box_num{
+                font-weight: bolder;
+                color: rgb(206, 206, 206);
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+            .box_data{
+                padding: 10px 30px;
+                padding-bottom: 40px;
+                .box_title{
+                    margin-bottom: 2rem;
+                }
+                .box_content{
+                    font-size: 14px;
+                    line-height: 1.8rem;
+                }
+            }
+            .line{
+                position: absolute;
+                bottom:10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                background-color: $bg-orange;
+                height: 3px;
+            }
+        }
+    }
+}

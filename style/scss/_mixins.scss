@@ -1,0 +1,33 @@
+
+@mixin Flex($alItems, $jsContent) {
+    display: flex;
+    align-items: $alItems;
+    justify-content: $jsContent;
+}
+@mixin Flex_colm($alItems, $column) {
+    display: flex;
+    align-items: $alItems;
+    flex-direction: $column;
+}
+@mixin Flex__colm($jsContent, $column) {
+    display: flex;
+    justify-content: $jsContent;
+    flex-direction: $column;
+}
+@mixin Flex__direct($column) {
+    display: flex;
+    flex-direction: $column;
+}
+@mixin Flex_algn($alItems) {
+    display: flex;
+    align-items: $alItems;
+}
+@mixin Flex_jcon($jContent) {
+    display: flex;
+    justify-content: $jContent;
+}
+@mixin ObjectFit($fit) {
+    width: 100%;
+    height: 100%;
+    object-fit: $fit;
+}
